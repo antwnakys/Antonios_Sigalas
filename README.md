@@ -1,6 +1,6 @@
-# Antonios Sigalas — Personal Portfolio
+# Antonis Sigalas — Personal Portfolio
 
-Personal portfolio website for **Antonios Sigalas** — Aspiring Cybersecurity & AI Developer based in Athens, Greece.
+Personal portfolio website for **Antonis Sigalas** — Aspiring Cybersecurity & AI Developer based in Athens, Greece.
 
 🔗 **Live site:** https://antwnakys.github.io/Antonios_Sigalas/
 
