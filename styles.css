@@ -54,23 +54,17 @@ a { color: inherit; }
   position: fixed; inset: 0; z-index: -3; overflow: hidden;
   pointer-events: none;
 }
+/* Static ambient glow — no animation (keeps the look, skips the per-frame GPU cost) */
 .blob {
-  position: absolute; border-radius: 50%; filter: blur(90px);
-  opacity: 0.5;
-  will-change: transform;
+  position: absolute; border-radius: 50%; filter: blur(80px);
+  opacity: 0.42;
 }
-.blob-1 { width: 620px; height: 620px; top: -18%; left: -8%;
-  background: radial-gradient(circle, rgba(109,124,255,0.55), transparent 68%);
-  animation: drift1 22s var(--ease) infinite alternate; }
-.blob-2 { width: 520px; height: 520px; top: 12%; right: -12%;
-  background: radial-gradient(circle, rgba(34,211,238,0.30), transparent 68%);
-  animation: drift2 26s var(--ease) infinite alternate; }
-.blob-3 { width: 560px; height: 560px; bottom: -22%; left: 32%;
-  background: radial-gradient(circle, rgba(139,147,255,0.28), transparent 68%);
-  animation: drift3 30s var(--ease) infinite alternate; }
-@keyframes drift1 { to { transform: translate(80px, 60px) scale(1.1); } }
-@keyframes drift2 { to { transform: translate(-70px, 50px) scale(1.08); } }
-@keyframes drift3 { to { transform: translate(50px, -60px) scale(1.12); } }
+.blob-1 { width: 600px; height: 600px; top: -18%; left: -8%;
+  background: radial-gradient(circle, rgba(109,124,255,0.55), transparent 68%); }
+.blob-2 { width: 500px; height: 500px; top: 12%; right: -12%;
+  background: radial-gradient(circle, rgba(34,211,238,0.30), transparent 68%); }
+.blob-3 { width: 540px; height: 540px; bottom: -22%; left: 32%;
+  background: radial-gradient(circle, rgba(139,147,255,0.28), transparent 68%); }
 
 .grid-overlay {
   position: fixed; inset: 0; z-index: -2; pointer-events: none;
@@ -83,15 +77,6 @@ a { color: inherit; }
 .scanline {
   position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: 0.5;
   background: linear-gradient(180deg, transparent 0%, rgba(10,10,15,0.0) 60%, rgba(10,10,15,0.9) 100%);
-}
-
-.cursor-glow {
-  position: fixed; top: 0; left: 0; width: 480px; height: 480px; z-index: -1;
-  border-radius: 50%; pointer-events: none;
-  background: radial-gradient(circle, rgba(109,124,255,0.10), transparent 60%);
-  transform: translate(-50%, -50%);
-  opacity: 0; transition: opacity 0.4s ease;
-  will-change: transform;
 }
 
 /* ---------- Scroll progress ---------- */
@@ -111,13 +96,11 @@ a { color: inherit; }
   display: flex; align-items: center; justify-content: space-between;
   gap: 1rem;
   padding: 0.9rem clamp(1.1rem, 5vw, 3rem);
-  background: rgba(10, 10, 15, 0.55);
-  backdrop-filter: blur(16px) saturate(140%);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  background: rgba(10, 10, 15, 0.82);
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s ease, background 0.3s ease;
 }
-.nav.scrolled { border-bottom-color: var(--border); background: rgba(10,10,15,0.72); }
+.nav.scrolled { border-bottom-color: var(--border); background: rgba(10,10,15,0.94); }
 .brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; font-weight: 600; }
 .brand-mark {
   font-family: var(--mono); font-weight: 700; font-size: 0.8rem;
@@ -235,8 +218,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1.1rem, 5vw, 2re
 .terminal {
   border-radius: var(--radius); overflow: hidden;
   border: 1px solid var(--border-strong);
-  background: linear-gradient(180deg, rgba(20,20,30,0.75), rgba(12,12,20,0.75));
-  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  background: linear-gradient(180deg, #14141e, #0d0d16);
   box-shadow: 0 30px 80px -30px rgba(0,0,0,0.8), 0 0 0 1px rgba(109,124,255,0.05);
 }
 .term-bar {
@@ -452,5 +434,4 @@ a:focus-visible, .btn:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .js .reveal { opacity: 1; transform: none; }
-  .cursor-glow { display: none; }
 }

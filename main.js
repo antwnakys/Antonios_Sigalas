@@ -71,35 +71,4 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  // Cursor spotlight (desktop, pointer:fine, motion allowed)
-  const glow = document.querySelector(".cursor-glow");
-  const fine = window.matchMedia("(pointer: fine)").matches;
-  if (glow && fine && !reduced) {
-    let gx = window.innerWidth / 2,
-      gy = window.innerHeight / 2,
-      cx = gx,
-      cy = gy,
-      raf = null;
-    window.addEventListener(
-      "mousemove",
-      (ev) => {
-        gx = ev.clientX;
-        gy = ev.clientY;
-        glow.style.opacity = "1";
-        if (!raf) loop();
-      },
-      { passive: true }
-    );
-    document.addEventListener("mouseleave", () => (glow.style.opacity = "0"));
-    function loop() {
-      cx += (gx - cx) * 0.12;
-      cy += (gy - cy) * 0.12;
-      glow.style.transform = "translate(" + cx + "px," + cy + "px) translate(-50%,-50%)";
-      if (Math.abs(gx - cx) > 0.5 || Math.abs(gy - cy) > 0.5) {
-        raf = requestAnimationFrame(loop);
-      } else {
-        raf = null;
-      }
-    }
-  }
 })();
