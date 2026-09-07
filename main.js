@@ -12,7 +12,7 @@
   const nav = document.getElementById("nav");
   const progressBar = document.getElementById("progressBar");
   const navLinks = Array.from(document.querySelectorAll(".nav-links a[data-nav]"));
-  const sections = ["about", "certs", "work", "contact"]
+  const sections = ["about", "skills", "work", "certs", "contact"]
     .map((id) => document.getElementById(id))
     .filter(Boolean);
 

@@ -294,6 +294,18 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1.1rem, 5vw, 2re
 .stat-num { font-family: var(--display); font-size: 1.8rem; font-weight: 600; color: var(--text); min-width: 3rem; }
 .stat-label { color: var(--faint); font-size: 0.9rem; }
 
+/* ---------- Skills ---------- */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.1rem; }
+.skill-cat {
+  padding: 1.5rem; border-radius: 16px;
+  border: 1px solid var(--border); background: var(--surface);
+  transition: transform 0.35s var(--ease), border-color 0.3s ease, background 0.3s ease;
+}
+.skill-cat:hover { transform: translateY(-4px); border-color: var(--border-strong); background: var(--surface-2); }
+.skill-cat h3 { font-family: var(--display); font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem; }
+.skill-cat h3 .learning { font-family: var(--mono); font-size: 0.72rem; color: var(--accent-2); font-weight: 400; }
+.skill-cat > p { color: var(--muted); font-size: 0.88rem; margin-top: 1rem; line-height: 1.6; }
+
 /* ---------- Certifications ---------- */
 .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.1rem; }
 .cert-card {
@@ -322,6 +334,15 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1.1rem, 5vw, 2re
   font-size: 0.72rem; font-family: var(--mono); color: #34d399;
   padding: 0.25rem 0.6rem; border-radius: 100px;
   background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.2);
+}
+.level {
+  font-size: 0.72rem; font-family: var(--mono); font-weight: 500; color: var(--accent);
+  padding: 0.25rem 0.6rem; border-radius: 100px;
+  background: var(--accent-soft); border: 1px solid var(--border-strong);
+}
+.work-card code, .about-lede code {
+  font-family: var(--mono); font-size: 0.82em; color: var(--accent-2);
+  background: var(--surface-2); padding: 0.05rem 0.35rem; border-radius: 5px;
 }
 .cert-card h3 { font-family: var(--display); font-size: 1.08rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.3; }
 .cert-issuer { color: var(--muted); font-size: 0.88rem; margin-top: 0.35rem; }
