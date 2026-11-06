@@ -54,6 +54,10 @@ and the `data-nav` links in the header.
   low-end GPUs. Keep the static glow; don't reintroduce heavy GPU effects,
   large animated backgrounds, or JS animation loops.
 - Respect `prefers-reduced-motion`; keep it accessible and fast on mobile.
+- `main.js` has a hidden keyboard shortcut (a typed code word) that opens his
+  self-hosted OpenInbox mail app at `mail.antoniossigalas.com` (a Cloudflare
+  Worker in his own account). Keep it invisible — no UI element. It is not a
+  security control; the app relies on its own login + 2FA.
 
 ## Known to-dos
 - `README.md` section list is out of date (missing Skills; lists the

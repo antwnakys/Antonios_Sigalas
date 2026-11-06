@@ -71,4 +71,17 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  // Hidden shortcut: typing the code word anywhere on the page opens the
+  // private mail app. Obscurity only — the app itself is protected by login + 2FA.
+  const INBOX_URL = "https://mail.antoniossigalas.com";
+  const CODE = "inbox";
+  let typed = "";
+  document.addEventListener("keydown", (e) => {
+    if (e.ctrlKey || e.metaKey || e.altKey || e.key.length !== 1) return;
+    const t = e.target;
+    if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+    typed = (typed + e.key.toLowerCase()).slice(-CODE.length);
+    if (typed === CODE) window.location.href = INBOX_URL;
+  });
+
 })();
