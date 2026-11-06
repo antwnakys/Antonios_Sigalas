@@ -8,8 +8,13 @@ Personal portfolio for **Antonis Sigalas** (GitHub `antwnakys`) — computer
 science student in Athens, Greece, building with Python and the Claude API,
 interested in cybersecurity and AI.
 
-- Live: https://antoniossigalas.com (custom domain via `CNAME`; GitHub Pages
-  also serves https://antwnakys.github.io/Antonios_Sigalas/)
+- Live: https://antoniossigalas.com, served by **GitHub Pages** (custom domain
+  via `CNAME`; `www.` 301-redirects to the apex). Merging to `main` redeploys
+  in ~1–2 min ("pages build and deployment" run). Pages sends
+  `cache-control: max-age=600`, so browsers may show old JS for up to 10 min.
+- DNS for antoniossigalas.com is on **Cloudflare** (free plan). It also carries
+  the mail records for OpenInbox (MX, SPF, DKIM, DMARC, Resend records) — don't
+  remove DNS records without checking OpenInbox → Admin → Domains.
 - Every file committed to `main` is publicly downloadable from the site — never
   commit backups, zips, CVs, or anything private.
 
@@ -59,6 +64,34 @@ and the `data-nav` links in the header.
   Worker in his own account). Keep it invisible — no UI element. It is not a
   security control; the app relies on its own login + 2FA.
 
+## OpenInbox (self-hosted email, set up Nov 2026)
+Separate from this repo; lives in his Cloudflare account. Facts only — never
+store tokens, keys or passwords here (this file is public).
+- Source: his private copy `antwnakys/openinbox`, an import of `sums001/OpenInbox`
+  ("source repo import" commit; it has **no** `.github` Sync upstream workflow).
+  It now carries his own push-notification code (migration `0004_push_tokens`,
+  `services/push.ts`, `/api/account/push`), so upstream updates must be merged
+  in by hand and re-tested (`npx vitest run`). Pushing to its `main` redeploys
+  the Worker. Never click the Deploy to Cloudflare button again (it creates a
+  second instance).
+- Cloudflare: Worker `openinbox` + D1 database `openinbox`, R2 bucket
+  `openinbox-mail` for attachments (card on file; free tier 10 GB, $1 budget
+  alert). Preview builds off.
+- URLs: `https://mail.antoniossigalas.com` (custom domain) and
+  `openinbox.antonsig08.workers.dev`. Owner/sign-in: `admin@antoniossigalas.com`,
+  2FA on. Sending via Resend free tier (100/day, 3,000/month limits set).
+- Stay on free tiers: don't enable Cloudflare Email Sending (Workers Paid).
+- Secrets (Cloudflare token, recovery key, Resend key, R2 keys) are entered only
+  into OpenInbox/Cloudflare UIs — remind him never to paste them into chat.
+- iPhone app **Antonis Mail** (`antwnakys/openinbox-app`, private): Expo SDK 58
+  WebView shell around mail.antoniossigalas.com with push notifications through
+  Expo. TestFlight only (never the public App Store), bundle id
+  `com.antoniossigalas.mail`, built with EAS on his Mac (he has a Mac and his
+  Apple Developer account from Grip OBD). TestFlight builds expire after 90 days.
+  Details and steps: that repo's README.md and CLAUDE.md.
+- Claude cloud environment `Antonios_Sigalas` allows antoniossigalas.com, www,
+  mail. and antwnakys.github.io, so sessions can test the live site.
+
 ## Known to-dos
 - `README.md` section list is out of date (missing Skills; lists the
   github.io URL rather than antoniossigalas.com).
@@ -67,4 +100,8 @@ and the `data-nav` links in the header.
 1. Initial portfolio → 2. dark editorial-tech redesign → 3. name "Antonis",
    professional copy → 4. custom domain → 5. CV-based content overhaul
    (Skills, Grip OBD, real repos, English certs) → 6. perf pass (removed GPU
-   effects) → 7. removed an accidentally uploaded repo-backup zip (Nov 2026).
+   effects) → 7. removed an accidentally uploaded repo-backup zip (Nov 2026)
+   → 8. set up OpenInbox at mail.antoniossigalas.com and added the hidden
+   keyboard shortcut in `main.js` (Nov 2026; verified on the live site)
+   → 9. started the Antonis Mail iPhone app + push notifications in his
+   OpenInbox copy (Nov 2026).
