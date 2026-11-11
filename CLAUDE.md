@@ -73,8 +73,9 @@ store tokens, keys or passwords here (this file is public).
   when updating): **Intercom** (WinguSuite-style internal mail between inboxes,
   with a per-inbox Intercom folder, Intercom also in the Inbox, and a small
   walkie-talkie icon), user **nicknames** (sign in with them; type them in
-  Intercom), and push-notification code that is unused now. Details: that
-  repo's CLAUDE.md. Pushing to its `main` redeploys
+  Intercom), a fix so "All inboxes" works with more than 5 inboxes (a D1 query
+  limit made it show "Inbox zero"), and push-notification code that is unused
+  now. Details: that repo's CLAUDE.md. Pushing to its `main` redeploys
   the Worker. Never click the Deploy to Cloudflare button again (it creates a
   second instance).
 - Cloudflare: Worker `openinbox` + D1 database `openinbox`, R2 bucket
@@ -109,4 +110,5 @@ store tokens, keys or passwords here (this file is public).
    → 9. started the Antonis Mail iPhone app + push notifications in his
    OpenInbox copy (Nov 2026) → 10. app on his iPhone via TestFlight, push
    dropped; OpenInbox gained Intercom, nicknames, per-inbox Intercom folders,
-   Intercom in the Inbox and a walkie-talkie icon (Nov 6–11, 2026).
+   Intercom in the Inbox and a walkie-talkie icon, and "All inboxes" was fixed
+   for 6+ inboxes (Nov 6–11, 2026).
