@@ -1,13 +1,14 @@
 # Antonis Sigalas — Personal Portfolio
 
-Personal portfolio website for **Antonis Sigalas** — Aspiring Cybersecurity & AI Developer based in Athens, Greece.
+Personal portfolio website for **Antonis Sigalas** — computer science student in Athens, Greece, building with Python and the Claude API, interested in cybersecurity and AI.
 
-🔗 **Live site:** https://antwnakys.github.io/Antonios_Sigalas/
+🔗 **Live site:** https://antoniossigalas.com
 
 ## Sections
 - **About** — short bio
-- **Certifications** — Anthropic certifications
-- **Projects** — selected GitHub work
+- **Skills** — languages, AI, automation and security fundamentals
+- **Work** — Grip OBD (iOS, on the App Store) and selected GitHub projects
+- **Credentials** — Anthropic certifications and English certificates
 - **Contact** — email and social links
 
 ## Tech
@@ -22,4 +23,4 @@ python3 -m http.server 8000
 ## Connect
 - GitHub: [@antwnakys](https://github.com/antwnakys)
 - LinkedIn: [Antonis Sigalas](https://www.linkedin.com/in/antonis-sigalas-836109335/)
-- Email: antonsig08@gmail.com
+- Email: dev@antoniossigalas.com

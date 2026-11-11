@@ -44,7 +44,7 @@ and the `data-nav` links in the header.
 - **Credentials:** Anthropic — AI Fluency: Framework & Foundations, Claude 101,
   Claude Code 101, Claude Platform 101, Introduction to Claude Cowork, Claude
   Code in Action. English — ESB Level 2 ESOL International, Michigan ECCE.
-- **Contact:** antonsig08@gmail.com, GitHub, LinkedIn
+- **Contact:** dev@antoniossigalas.com (his OpenInbox; was his Gmail until Nov 2026), GitHub, LinkedIn
   (`/in/antonis-sigalas-836109335/`).
 
 ## Decisions & preferences (don't undo)
@@ -97,8 +97,7 @@ store tokens, keys or passwords here (this file is public).
   mail. and antwnakys.github.io, so sessions can test the live site.
 
 ## Known to-dos
-- `README.md` section list is out of date (missing Skills; lists the
-  github.io URL rather than antoniossigalas.com).
+- None right now.
 
 ## History
 1. Initial portfolio → 2. dark editorial-tech redesign → 3. name "Antonis",
@@ -111,4 +110,5 @@ store tokens, keys or passwords here (this file is public).
    OpenInbox copy (Nov 2026) → 10. app on his iPhone via TestFlight, push
    dropped; OpenInbox gained Intercom, nicknames, per-inbox Intercom folders,
    Intercom in the Inbox and a walkie-talkie icon, and "All inboxes" was fixed
-   for 6+ inboxes (Nov 6–11, 2026).
+   for 6+ inboxes (Nov 6–11, 2026) → 11. contact email switched to
+   dev@antoniossigalas.com, README brought up to date (Nov 11, 2026).
