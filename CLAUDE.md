@@ -80,7 +80,9 @@ store tokens, keys or passwords here (this file is public).
   **weekly backup** (GitHub Action, Sundays 03:17 UTC) of the D1 database to R2
   `openinbox-mail/backups/` (repo secret `CLOUDFLARE_BACKUP_TOKEN`; first run
   succeeded Nov 11, 2026; restore steps in its `BACKUP.md`). The unused push
-  code was removed. Details: that repo's CLAUDE.md. Pushing to its `main` redeploys
+  code was removed. Its `FORFUTURE/` folder holds a ready plan and setup script
+  for a second, separate OpenInbox on a future domain (start there when he says
+  "read FORFUTURE"). Details: that repo's CLAUDE.md. Pushing to its `main` redeploys
   the Worker. Never click the Deploy to Cloudflare button again (it creates a
   second instance).
 - Cloudflare: Worker `openinbox` + D1 database `openinbox`, R2 bucket
@@ -119,4 +121,4 @@ store tokens, keys or passwords here (this file is public).
    for 6+ inboxes (Nov 6–11, 2026) → 11. contact email switched to
    dev@antoniossigalas.com, README brought up to date (Nov 11, 2026)
    → 12. OpenInbox weekly backups live, DMARC set to quarantine, app build
-   1.0.0 (5) submitted to TestFlight (Nov 11, 2026).
+   1.0.0 (5) submitted to TestFlight, FORFUTURE plan written (Nov 11, 2026).
