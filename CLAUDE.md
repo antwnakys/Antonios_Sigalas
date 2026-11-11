@@ -98,8 +98,10 @@ store tokens, keys or passwords here (this file is public).
   WebView shell around mail.antoniossigalas.com, **no push notifications** (his
   choice), Intercom hidden in it (web-only). TestFlight only (never the public
   App Store), built with EAS on his Mac with his Apple Developer account. The
-  "feel like an app" build (TestFlight 1.0.0 (5)) was built and submitted on
-  Nov 11, 2026; next he installs it and reports what still feels off.
+  "feel like an app" build (TestFlight 1.0.0 (5)) is installed (Nov 11, 2026).
+  The same day OpenInbox got a full phone layout (swipe actions, floating
+  Compose, full-screen reading/writing, instant start), which the app shows
+  without a rebuild; build 6 (haptics) is next.
   TestFlight builds expire after 90 days. Details: that repo's CLAUDE.md/TODO.md.
 - Claude cloud environment `Antonios_Sigalas` allows antoniossigalas.com, www,
   mail. and antwnakys.github.io, so sessions can test the live site.
@@ -121,4 +123,5 @@ store tokens, keys or passwords here (this file is public).
    for 6+ inboxes (Nov 6–11, 2026) → 11. contact email switched to
    dev@antoniossigalas.com, README brought up to date (Nov 11, 2026)
    → 12. OpenInbox weekly backups live, DMARC set to quarantine, app build
-   1.0.0 (5) submitted to TestFlight, FORFUTURE plan written (Nov 11, 2026).
+   1.0.0 (5) submitted to TestFlight, FORFUTURE plan written (Nov 11, 2026)
+   → 13. iPhone redesign of OpenInbox's phone layout + app haptics (Nov 11, 2026).
