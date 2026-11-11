@@ -69,9 +69,12 @@ Separate from this repo; lives in his Cloudflare account. Facts only — never
 store tokens, keys or passwords here (this file is public).
 - Source: his private copy `antwnakys/openinbox`, an import of `sums001/OpenInbox`
   ("source repo import" commit; it has **no** `.github` Sync upstream workflow).
-  It now carries his own push-notification code (migration `0004_push_tokens`,
-  `services/push.ts`, `/api/account/push`), so upstream updates must be merged
-  in by hand and re-tested (`npx vitest run`). Pushing to its `main` redeploys
+  It carries his own features on top of upstream (merged by hand and re-tested
+  when updating): **Intercom** (WinguSuite-style internal mail between inboxes,
+  with a per-inbox Intercom folder, Intercom also in the Inbox, and a small
+  walkie-talkie icon), user **nicknames** (sign in with them; type them in
+  Intercom), and push-notification code that is unused now. Details: that
+  repo's CLAUDE.md. Pushing to its `main` redeploys
   the Worker. Never click the Deploy to Cloudflare button again (it creates a
   second instance).
 - Cloudflare: Worker `openinbox` + D1 database `openinbox`, R2 bucket
@@ -84,11 +87,11 @@ store tokens, keys or passwords here (this file is public).
 - Secrets (Cloudflare token, recovery key, Resend key, R2 keys) are entered only
   into OpenInbox/Cloudflare UIs — remind him never to paste them into chat.
 - iPhone app **Antonis Mail** (`antwnakys/openinbox-app`, private): Expo SDK 58
-  WebView shell around mail.antoniossigalas.com with push notifications through
-  Expo. TestFlight only (never the public App Store), bundle id
-  `com.antoniossigalas.mail`, built with EAS on his Mac (he has a Mac and his
-  Apple Developer account from Grip OBD). TestFlight builds expire after 90 days.
-  Details and steps: that repo's README.md and CLAUDE.md.
+  WebView shell around mail.antoniossigalas.com, **no push notifications** (his
+  choice), Intercom hidden in it (web-only). TestFlight only (never the public
+  App Store), built with EAS on his Mac with his Apple Developer account. Build 2
+  is installed; build 3 ("feel like an app" fixes) is waiting to be built.
+  TestFlight builds expire after 90 days. Details: that repo's CLAUDE.md/TODO.md.
 - Claude cloud environment `Antonios_Sigalas` allows antoniossigalas.com, www,
   mail. and antwnakys.github.io, so sessions can test the live site.
 
@@ -104,4 +107,6 @@ store tokens, keys or passwords here (this file is public).
    → 8. set up OpenInbox at mail.antoniossigalas.com and added the hidden
    keyboard shortcut in `main.js` (Nov 2026; verified on the live site)
    → 9. started the Antonis Mail iPhone app + push notifications in his
-   OpenInbox copy (Nov 2026).
+   OpenInbox copy (Nov 2026) → 10. app on his iPhone via TestFlight, push
+   dropped; OpenInbox gained Intercom, nicknames, per-inbox Intercom folders,
+   Intercom in the Inbox and a walkie-talkie icon (Nov 6–11, 2026).
