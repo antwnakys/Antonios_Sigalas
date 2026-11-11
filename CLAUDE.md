@@ -14,7 +14,9 @@ interested in cybersecurity and AI.
   `cache-control: max-age=600`, so browsers may show old JS for up to 10 min.
 - DNS for antoniossigalas.com is on **Cloudflare** (free plan). It also carries
   the mail records for OpenInbox (MX, SPF, DKIM, DMARC, Resend records) — don't
-  remove DNS records without checking OpenInbox → Admin → Domains.
+  remove DNS records without checking OpenInbox → Admin → Domains. DMARC was
+  tightened on Nov 11, 2026 to `v=DMARC1; p=quarantine; adkim=r; aspf=r`
+  (OpenInbox's Repair doesn't overwrite an existing DMARC record).
 - Every file committed to `main` is publicly downloadable from the site — never
   commit backups, zips, CVs, or anything private.
 
@@ -74,8 +76,11 @@ store tokens, keys or passwords here (this file is public).
   with a per-inbox Intercom folder, Intercom also in the Inbox, and a small
   walkie-talkie icon), user **nicknames** (sign in with them; type them in
   Intercom), a fix so "All inboxes" works with more than 5 inboxes (a D1 query
-  limit made it show "Inbox zero"), and push-notification code that is unused
-  now. Details: that repo's CLAUDE.md. Pushing to its `main` redeploys
+  limit made it show "Inbox zero"), inbox colours, a tidier sidebar, and a
+  **weekly backup** (GitHub Action, Sundays 03:17 UTC) of the D1 database to R2
+  `openinbox-mail/backups/` (repo secret `CLOUDFLARE_BACKUP_TOKEN`; first run
+  succeeded Nov 11, 2026; restore steps in its `BACKUP.md`). The unused push
+  code was removed. Details: that repo's CLAUDE.md. Pushing to its `main` redeploys
   the Worker. Never click the Deploy to Cloudflare button again (it creates a
   second instance).
 - Cloudflare: Worker `openinbox` + D1 database `openinbox`, R2 bucket
@@ -90,8 +95,9 @@ store tokens, keys or passwords here (this file is public).
 - iPhone app **Antonis Mail** (`antwnakys/openinbox-app`, private): Expo SDK 58
   WebView shell around mail.antoniossigalas.com, **no push notifications** (his
   choice), Intercom hidden in it (web-only). TestFlight only (never the public
-  App Store), built with EAS on his Mac with his Apple Developer account. Build 2
-  is installed; build 3 ("feel like an app" fixes) is waiting to be built.
+  App Store), built with EAS on his Mac with his Apple Developer account. The
+  "feel like an app" build (TestFlight 1.0.0 (5)) was built and submitted on
+  Nov 11, 2026; next he installs it and reports what still feels off.
   TestFlight builds expire after 90 days. Details: that repo's CLAUDE.md/TODO.md.
 - Claude cloud environment `Antonios_Sigalas` allows antoniossigalas.com, www,
   mail. and antwnakys.github.io, so sessions can test the live site.
@@ -111,4 +117,6 @@ store tokens, keys or passwords here (this file is public).
    dropped; OpenInbox gained Intercom, nicknames, per-inbox Intercom folders,
    Intercom in the Inbox and a walkie-talkie icon, and "All inboxes" was fixed
    for 6+ inboxes (Nov 6–11, 2026) → 11. contact email switched to
-   dev@antoniossigalas.com, README brought up to date (Nov 11, 2026).
+   dev@antoniossigalas.com, README brought up to date (Nov 11, 2026)
+   → 12. OpenInbox weekly backups live, DMARC set to quarantine, app build
+   1.0.0 (5) submitted to TestFlight (Nov 11, 2026).
