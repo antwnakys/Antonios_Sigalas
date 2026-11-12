@@ -13,7 +13,7 @@
 
   --text: #f3f4f8;
   --muted: #a2a7b8;
-  --faint: #6b7185;
+  --faint: #80869a; /* 4.5:1+ on every dark surface (WCAG AA); was #6b7185 */
 
   --accent: #6d7cff;
   --accent-2: #22d3ee;
@@ -141,8 +141,8 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1.1rem, 5vw, 2re
   line-height: 1.12; letter-spacing: -0.02em; margin-top: 0.9rem;
 }
 .sec-sub { color: var(--muted); margin-top: 0.9rem; }
-.sec-sub a { color: var(--accent-2); text-decoration: none; }
-.sec-sub a:hover { text-decoration: underline; }
+.sec-sub a { color: var(--accent-2); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: rgba(34, 211, 238, 0.45); }
+.sec-sub a:hover { text-decoration-color: currentColor; }
 
 /* ---------- Reveal ---------- */
 .js .reveal { opacity: 0; transform: translateY(28px); }
