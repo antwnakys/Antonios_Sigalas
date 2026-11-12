@@ -101,7 +101,8 @@ store tokens, keys or passwords here (this file is public).
   succeeded Nov 11, 2026; restore steps in its `BACKUP.md`). The unused push
   code was removed. Its `FORFUTURE/` folder holds a ready plan and setup script
   for a second, separate OpenInbox on a future domain (start there when he says
-  "read FORFUTURE"). Details: that repo's CLAUDE.md. Pushing to its `main` redeploys
+  "read FORFUTURE"; `FORFUTURE/PROMPTS.md` has the exact messages he sends at
+  each step). Details: that repo's CLAUDE.md. Pushing to its `main` redeploys
   the Worker. Never click the Deploy to Cloudflare button again (it creates a
   second instance).
 - Cloudflare: Worker `openinbox` + D1 database `openinbox`, R2 bucket
@@ -155,4 +156,6 @@ store tokens, keys or passwords here (this file is public).
    → 17. README rewritten with the readme-writer skill (badges, screenshots,
    grade 7), and the phone overflow bug fixed (page was wider than the
    screen; Nov 12, 2026) → 18. OpenInbox's README rewritten the same way: every
-   local change with its PR, grade 7.4; upstream's kept as UPSTREAM-README.md.
+   local change with its PR, grade 7.4; upstream's kept as UPSTREAM-README.md
+   → 19. FORFUTURE/PROMPTS.md: ready-to-send prompts for the future company
+   setup; the copy script now also fixes the uptime check and README.
