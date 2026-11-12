@@ -99,7 +99,8 @@ store tokens, keys or passwords here (this file is public).
   with a per-inbox Intercom folder, Intercom also in the Inbox, and a small
   walkie-talkie icon), user **nicknames** (sign in with them; type them in
   Intercom), a fix so "All inboxes" works with more than 5 inboxes (a D1 query
-  limit made it show "Inbox zero"), inbox colours, a tidier sidebar, and a
+  limit made it show "Inbox zero"), inbox colours, a tidier sidebar, **calendar invites**
+  (Accept / Maybe / Decline replies, Add to calendar; Nov 12, 2026), and a
   **weekly backup** (GitHub Action, Sundays 03:17 UTC) of the D1 database to R2
   `openinbox-mail/backups/` (repo secret `CLOUDFLARE_BACKUP_TOKEN`; first run
   succeeded Nov 11, 2026; restore steps in its `BACKUP.md`). The unused push
@@ -167,4 +168,7 @@ store tokens, keys or passwords here (this file is public).
    public repos, axe accessibility 0 issues (--faint #6b7185 → #80869a for 4.5:1
    contrast, the "github.com/antwnakys" link underlined) (Nov 12, 2026)
    → 21. OpenInbox security review + weekly restore test; app build 7 (Face ID)
-   installed (Nov 12, 2026).
+   installed (Nov 12, 2026) → 22. OpenInbox: checks on every PR and weekly Dependabot
+   updates, and calendar invites (Accept / Maybe / Decline, Add to calendar; app build
+   1.1.0 (8) needed for Add to calendar in the app). Steps for auto-deleting backups
+   older than 90 days given (Nov 12, 2026).
