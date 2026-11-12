@@ -37,6 +37,12 @@ Plain static site, no build step, no dependencies, no framework.
   words in the top 1,000; keep it at grade 9 or below and in plain English. Its screenshots are in
   `docs/` (`screenshot-desktop.jpg` 1440px, `screenshot-phone.jpg` iPhone 15 Pro). Retake them when
   the hero changes. Don't mention the hidden mail shortcut or the mail subdomain in it.
+- **readme-writer skill:** Nate Berkopec's, MIT. It was deleted from his dotfiles repo, so get the last
+  full version from https://github.com/nateberkopec/dotfiles at commit `1cd5d85`, path
+  `files/home/.claude/skills/readme-writer`. On Nov 12, 2026 it was installed only in that cloud
+  session's `~/.claude/skills`, which is temporary. Antonis was given 3 commands to install it on his
+  Mac. Auto mode blocks running its Ruby scorers, so the same Flesch-Kincaid and top-1000 formulas
+  were computed in Python instead.
 - **No horizontal overflow on phones:** `.hero > * { min-width: 0 }` (the terminal's `white-space:
   pre` lines used to widen the page to about 411px on a 320px phone), `minmax(min(Npx, 100%), 1fr)`
   in the skills, certs and work grids, `.contact .btn` may wrap, and the hero buttons stay on one
@@ -148,4 +154,5 @@ store tokens, keys or passwords here (this file is public).
    hourly uptime check of the site and the mail server (Nov 12, 2026)
    → 17. README rewritten with the readme-writer skill (badges, screenshots,
    grade 7), and the phone overflow bug fixed (page was wider than the
-   screen; Nov 12, 2026).
+   screen; Nov 12, 2026) → 18. OpenInbox's README rewritten the same way: every
+   local change with its PR, grade 7.4; upstream's kept as UPSTREAM-README.md.
