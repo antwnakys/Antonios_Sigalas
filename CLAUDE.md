@@ -61,7 +61,8 @@ and the `data-nav` links in the header.
   repos, `.work-card--static` with a "Private repo" note; never link the mail
   site from it, the shortcut stays hidden), then repo cards: security-toolkit, reconforge, phish-analyzer, log-sentinel,
   credential-checker, jwt-inspector, totp-authenticator, tech-news-agent,
-  paper-trader, carro, ctf-writeups, plus "See all 29 repositories".
+  paper-trader, carro, ctf-writeups, plus "See all 32 repositories" (count checked Nov 12, 2026 with
+  GitHub search: 44 repos, 32 public).
 - **Credentials:** Anthropic — AI Fluency: Framework & Foundations, Claude 101,
   Claude Code 101, Claude Platform 101, Introduction to Claude Cowork, Claude
   Code in Action. English — ESB Level 2 ESOL International, Michigan ECCE.
@@ -73,13 +74,16 @@ and the `data-nav` links in the header.
 - Framing: honest **CS student** who learns by building and shipping — not a
   senior/professional security expert. Professional, understated tone; no hype.
 - Content comes from his real CV and real public repos. Don't invent projects,
-  metrics, employers, or certifications. Update the "29 repositories" count only
-  from the real GitHub profile.
+  metrics, employers, or certifications. Update the public-repo count (32 as of
+  Nov 12, 2026; in the meta/og descriptions, hero, stats and the "See all" card) only from the real
+  GitHub profile (`gh api -X GET search/repositories -f q='user:antwnakys is:public'`).
 - Look: premium dark, editorial-tech. **Performance first** — animated blobs,
   cursor glow, and `backdrop-filter` blur were removed because they lagged on
   low-end GPUs. Keep the static glow; don't reintroduce heavy GPU effects,
   large animated backgrounds, or JS animation loops.
-- Respect `prefers-reduced-motion`; keep it accessible and fast on mobile.
+- Respect `prefers-reduced-motion`; keep it accessible and fast on mobile. axe (wcag2a/aa +
+  best-practice) is at 0 violations on desktop and phone; keep text at 4.5:1 or more (`--faint` is
+  the lightest allowed grey) and links in running text underlined.
 - `main.js` has a hidden keyboard shortcut (a typed code word) that opens his
   self-hosted OpenInbox mail app at `mail.antoniossigalas.com` (a Cloudflare
   Worker in his own account). Keep it invisible — no UI element. It is not a
@@ -158,4 +162,7 @@ store tokens, keys or passwords here (this file is public).
    screen; Nov 12, 2026) → 18. OpenInbox's README rewritten the same way: every
    local change with its PR, grade 7.4; upstream's kept as UPSTREAM-README.md
    → 19. FORFUTURE/PROMPTS.md: ready-to-send prompts for the future company
-   setup; the copy script now also fixes the uptime check and README.
+   setup; the copy script now also fixes the uptime check and README
+   → 20. check-up: links verified (all 11 repo cards exist, public), count 29 → 32
+   public repos, axe accessibility 0 issues (--faint #6b7185 → #80869a for 4.5:1
+   contrast, the "github.com/antwnakys" link underlined) (Nov 12, 2026).
