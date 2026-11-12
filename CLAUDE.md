@@ -131,4 +131,6 @@ store tokens, keys or passwords here (this file is public).
    → 14. build 6 installed; Intercom shown in the iPhone app (Nov 12, 2026)
    → 15. OpenInbox synced with upstream (security fixes, sender logos), phone
    swipe settings, Face ID lock committed for app build 7, expiry reminder
-   scheduled for Feb 3, 2027, openinbox card on the portfolio (Nov 12, 2026).
+   scheduled for Feb 3, 2027, openinbox card on the portfolio (Nov 12, 2026)
+   → 16. first live end-to-end test of OpenInbox from a Claude session (all
+   green; procedure in that repo's CLAUDE.md, "Testing the live site").
