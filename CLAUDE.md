@@ -124,9 +124,9 @@ store tokens, keys or passwords here (this file is public).
   App Store), built with EAS on his Mac with his Apple Developer account. The
   OpenInbox has a full phone layout (swipe actions, floating Compose,
   full-screen reading/writing, instant start; Nov 11, 2026), which the app
-  shows without a rebuild. Build 1.0.0 (6) (haptics) is installed (Nov 12);
-  build 7 (Face ID lock) is committed and waiting to be built on his Mac. A
-  scheduled reminder fires Feb 3, 2027 to rebuild before TestFlight expiry.
+  shows without a rebuild. Build 1.0.0 (7) is installed (Nov 12, 2026): Face
+  ID lock, link hardening, haptics. A scheduled reminder fires Feb 3, 2027 to
+  rebuild before TestFlight expiry (about Feb 10).
   TestFlight builds expire after 90 days. Details: that repo's CLAUDE.md/TODO.md.
 - Claude cloud environment `Antonios_Sigalas` allows antoniossigalas.com, www,
   mail. and antwnakys.github.io, so sessions can test the live site.
@@ -165,4 +165,6 @@ store tokens, keys or passwords here (this file is public).
    setup; the copy script now also fixes the uptime check and README
    → 20. check-up: links verified (all 11 repo cards exist, public), count 29 → 32
    public repos, axe accessibility 0 issues (--faint #6b7185 → #80869a for 4.5:1
-   contrast, the "github.com/antwnakys" link underlined) (Nov 12, 2026).
+   contrast, the "github.com/antwnakys" link underlined) (Nov 12, 2026)
+   → 21. OpenInbox security review + weekly restore test; app build 7 (Face ID)
+   installed (Nov 12, 2026).
