@@ -39,8 +39,10 @@ and the `data-nav` links in the header.
 - **Skills:** Python (main), JS/TS, HTML/CSS; Claude API, prompt design, tool
   integration; GitHub Actions, Vercel, Supabase, pytest; security fundamentals
   (networking, hashing, web security, OWASP headers, JWT/auth, TOTP).
-- **Work:** featured **Grip OBD** (iOS, App Store id6801558613), then repo
-  cards: security-toolkit, reconforge, phish-analyzer, log-sentinel,
+- **Work:** featured **Grip OBD** (iOS, App Store id6801558613), then a
+  non-link card **openinbox** (his self-hosted mail + Antonis Mail app; private
+  repos, `.work-card--static` with a "Private repo" note; never link the mail
+  site from it, the shortcut stays hidden), then repo cards: security-toolkit, reconforge, phish-analyzer, log-sentinel,
   credential-checker, jwt-inspector, totp-authenticator, tech-news-agent,
   paper-trader, carro, ctf-writeups, plus "See all 29 repositories".
 - **Credentials:** Anthropic — AI Fluency: Framework & Foundations, Claude 101,
@@ -100,7 +102,9 @@ store tokens, keys or passwords here (this file is public).
   App Store), built with EAS on his Mac with his Apple Developer account. The
   OpenInbox has a full phone layout (swipe actions, floating Compose,
   full-screen reading/writing, instant start; Nov 11, 2026), which the app
-  shows without a rebuild. Build 1.0.0 (6) (haptics) is installed (Nov 12).
+  shows without a rebuild. Build 1.0.0 (6) (haptics) is installed (Nov 12);
+  build 7 (Face ID lock) is committed and waiting to be built on his Mac. A
+  scheduled reminder fires Feb 3, 2027 to rebuild before TestFlight expiry.
   TestFlight builds expire after 90 days. Details: that repo's CLAUDE.md/TODO.md.
 - Claude cloud environment `Antonios_Sigalas` allows antoniossigalas.com, www,
   mail. and antwnakys.github.io, so sessions can test the live site.
@@ -124,4 +128,7 @@ store tokens, keys or passwords here (this file is public).
    → 12. OpenInbox weekly backups live, DMARC set to quarantine, app build
    1.0.0 (5) submitted to TestFlight, FORFUTURE plan written (Nov 11, 2026)
    → 13. iPhone redesign of OpenInbox's phone layout + app haptics (Nov 11, 2026)
-   → 14. build 6 installed; Intercom shown in the iPhone app (Nov 12, 2026).
+   → 14. build 6 installed; Intercom shown in the iPhone app (Nov 12, 2026)
+   → 15. OpenInbox synced with upstream (security fixes, sender logos), phone
+   swipe settings, Face ID lock committed for app build 7, expiry reminder
+   scheduled for Feb 3, 2027, openinbox card on the portfolio (Nov 12, 2026).

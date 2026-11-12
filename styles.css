@@ -366,6 +366,9 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1.1rem, 5vw, 2re
 .arr { color: var(--faint); transition: transform 0.3s var(--ease), color 0.3s ease; font-size: 1.1rem; }
 .work-card:hover .arr, .feature:hover .arr { color: var(--accent-2); transform: translate(3px, -3px); }
 .work-card--more { justify-content: center; border-style: dashed; }
+/* A card without a public link (private repo): no lift, a small note instead of the arrow. */
+.work-card--static:hover { transform: none; }
+.wc-note { font-family: var(--mono); font-size: 0.72rem; color: var(--faint); border: 1px solid var(--border); border-radius: 999px; padding: 0.15rem 0.55rem; white-space: nowrap; }
 
 /* Tags */
 .tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
