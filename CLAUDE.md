@@ -96,12 +96,11 @@ store tokens, keys or passwords here (this file is public).
   into OpenInbox/Cloudflare UIs — remind him never to paste them into chat.
 - iPhone app **Antonis Mail** (`antwnakys/openinbox-app`, private): Expo SDK 58
   WebView shell around mail.antoniossigalas.com, **no push notifications** (his
-  choice), Intercom hidden in it (web-only). TestFlight only (never the public
+  choice), Intercom included (shown in the app since Nov 12, 2026). TestFlight only (never the public
   App Store), built with EAS on his Mac with his Apple Developer account. The
-  "feel like an app" build (TestFlight 1.0.0 (5)) is installed (Nov 11, 2026).
-  The same day OpenInbox got a full phone layout (swipe actions, floating
-  Compose, full-screen reading/writing, instant start), which the app shows
-  without a rebuild; build 6 (haptics) is next.
+  OpenInbox has a full phone layout (swipe actions, floating Compose,
+  full-screen reading/writing, instant start; Nov 11, 2026), which the app
+  shows without a rebuild. Build 1.0.0 (6) (haptics) is installed (Nov 12).
   TestFlight builds expire after 90 days. Details: that repo's CLAUDE.md/TODO.md.
 - Claude cloud environment `Antonios_Sigalas` allows antoniossigalas.com, www,
   mail. and antwnakys.github.io, so sessions can test the live site.
@@ -124,4 +123,5 @@ store tokens, keys or passwords here (this file is public).
    dev@antoniossigalas.com, README brought up to date (Nov 11, 2026)
    → 12. OpenInbox weekly backups live, DMARC set to quarantine, app build
    1.0.0 (5) submitted to TestFlight, FORFUTURE plan written (Nov 11, 2026)
-   → 13. iPhone redesign of OpenInbox's phone layout + app haptics (Nov 11, 2026).
+   → 13. iPhone redesign of OpenInbox's phone layout + app haptics (Nov 11, 2026)
+   → 14. build 6 installed; Intercom shown in the iPhone app (Nov 12, 2026).
