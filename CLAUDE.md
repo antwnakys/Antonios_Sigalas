@@ -100,7 +100,9 @@ store tokens, keys or passwords here (this file is public).
   walkie-talkie icon), user **nicknames** (sign in with them; type them in
   Intercom), a fix so "All inboxes" works with more than 5 inboxes (a D1 query
   limit made it show "Inbox zero"), inbox colours, a tidier sidebar, **calendar invites**
-  (Accept / Maybe / Decline replies, Add to calendar; Nov 12, 2026), and a
+  (Accept / Maybe / Decline replies, Add to calendar; Nov 12, 2026), WinguMail-style tools (mail IDs,
+  saved searches, reminders, linked conversations, personal labels, custom fields, per-person read
+  state, history, team reports; Nov 12, 2026), and a
   **weekly backup** (GitHub Action, Sundays 03:17 UTC) of the D1 database to R2
   `openinbox-mail/backups/` (repo secret `CLOUDFLARE_BACKUP_TOKEN`; first run
   succeeded Nov 11, 2026; restore steps in its `BACKUP.md`). The unused push
@@ -171,4 +173,8 @@ store tokens, keys or passwords here (this file is public).
    installed (Nov 12, 2026) → 22. OpenInbox: checks on every PR and weekly Dependabot
    updates, and calendar invites (Accept / Maybe / Decline, Add to calendar; app build
    1.1.0 (8) needed for Add to calendar in the app). Steps for auto-deleting backups
-   older than 90 days given (Nov 12, 2026).
+   older than 90 days given (Nov 12, 2026) → 23. OpenInbox: Unsubscribe button, undo-send delay,
+   "Filter messages like this", and his whole WinguMail feature list in 4 batches: mail IDs (searchable),
+   saved searches, reminders with a note, attach from email; linked conversations, personal labels,
+   custom fields; read state per person on shared inboxes, "someone is replying", history per
+   conversation, Admin → Reports; the same email stored once across inboxes (Nov 12, 2026).
