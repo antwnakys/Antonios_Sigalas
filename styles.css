@@ -179,6 +179,9 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1.1rem, 5vw, 2re
   gap: clamp(2rem, 5vw, 4rem);
   padding-top: 6rem; padding-bottom: 3rem;
 }
+/* Grid columns may shrink below their content; otherwise the terminal's long lines made the whole
+   page wider than a phone screen (the terminal scrolls sideways instead). */
+.hero > * { min-width: 0; }
 .status-pill {
   display: inline-flex; align-items: center; gap: 0.5rem;
   font-size: 0.8rem; color: var(--muted); font-family: var(--mono);
@@ -277,7 +280,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1.1rem, 5vw, 2re
 .stat-label { color: var(--faint); font-size: 0.9rem; }
 
 /* ---------- Skills ---------- */
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.1rem; }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 1.1rem; }
 .skill-cat {
   padding: 1.5rem; border-radius: 16px;
   border: 1px solid var(--border); background: var(--surface);
@@ -289,7 +292,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1.1rem, 5vw, 2re
 .skill-cat > p { color: var(--muted); font-size: 0.88rem; margin-top: 1rem; line-height: 1.6; }
 
 /* ---------- Certifications ---------- */
-.cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.1rem; }
+.cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); gap: 1.1rem; }
 .cert-card {
   position: relative; padding: 1.5rem; border-radius: 16px;
   border: 1px solid var(--border); background: var(--surface);
@@ -352,7 +355,8 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1.1rem, 5vw, 2re
 .chart { width: 100%; height: 100%; }
 .chart svg { width: 100%; height: 100%; display: block; }
 
-.work-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.1rem; }
+/* min(…, 100%): on very narrow phones a card takes the full width instead of overflowing it. */
+.work-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 1.1rem; }
 .work-card {
   display: flex; flex-direction: column; text-decoration: none; color: inherit;
   padding: 1.6rem; border-radius: 16px; border: 1px solid var(--border);
@@ -381,6 +385,8 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1.1rem, 5vw, 2re
 /* ---------- Contact ---------- */
 .contact { text-align: center; }
 .contact-inner { max-width: 720px; margin: 0 auto; }
+/* The email button may wrap its address on the narrowest phones instead of sticking out. */
+.contact .btn { max-width: 100%; overflow-wrap: anywhere; }
 .contact-title {
   font-family: var(--display); font-weight: 700;
   font-size: clamp(2.2rem, 7vw, 4.2rem); line-height: 1.05; letter-spacing: -0.03em;
@@ -429,7 +435,8 @@ a:focus-visible, .btn:focus-visible {
 @media (max-width: 560px) {
   .nav-cta { display: none; }
   .hero-cta { width: 100%; }
-  .hero-cta .btn { flex: 1; justify-content: center; }
+  .term-body { font-size: 0.74rem; padding: 1.1rem 1.1rem; }
+  .hero-cta .btn { flex: 1; justify-content: center; white-space: nowrap; padding-inline: 1rem; }
   .footer { flex-direction: column; text-align: center; }
 }
 
