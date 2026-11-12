@@ -12,6 +12,9 @@ interested in cybersecurity and AI.
   via `CNAME`; `www.` 301-redirects to the apex). Merging to `main` redeploys
   in ~1–2 min ("pages build and deployment" run). Pages sends
   `cache-control: max-age=600`, so browsers may show old JS for up to 10 min.
+- Monitored: an hourly uptime check (GitHub Action in his private openinbox
+  repo) loads this homepage and the mail server; if either fails 3 times in a
+  row, GitHub emails him (since Nov 12, 2026).
 - DNS for antoniossigalas.com is on **Cloudflare** (free plan). It also carries
   the mail records for OpenInbox (MX, SPF, DKIM, DMARC, Resend records) — don't
   remove DNS records without checking OpenInbox → Admin → Domains. DMARC was
@@ -133,4 +136,5 @@ store tokens, keys or passwords here (this file is public).
    swipe settings, Face ID lock committed for app build 7, expiry reminder
    scheduled for Feb 3, 2027, openinbox card on the portfolio (Nov 12, 2026)
    → 16. first live end-to-end test of OpenInbox from a Claude session (all
-   green; procedure in that repo's CLAUDE.md, "Testing the live site").
+   green; procedure in that repo's CLAUDE.md, "Testing the live site") and an
+   hourly uptime check of the site and the mail server (Nov 12, 2026).
