@@ -177,4 +177,7 @@ store tokens, keys or passwords here (this file is public).
    "Filter messages like this", and his whole WinguMail feature list in 4 batches: mail IDs (searchable),
    saved searches, reminders with a note, attach from email; linked conversations, personal labels,
    custom fields; read state per person on shared inboxes, "someone is replying", history per
-   conversation, Admin → Reports; the same email stored once across inboxes (Nov 12, 2026).
+   conversation, Admin → Reports; the same email stored once across inboxes (Nov 12, 2026) → 24. OpenInbox: sidebar
+   toggle and dates with 12-hour times (computer, then phone), library updates merged, security review of
+   the new features (two link privacy leaks fixed), shared inboxes keep read mail read when switched or
+   joined; app build 1.1.0 (8) planned for 3 PM on his Mac (reminder set) (Nov 13, 2026).
