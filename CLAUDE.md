@@ -135,7 +135,16 @@ store tokens, keys or passwords here (this file is public).
   mail. and antwnakys.github.io, so sessions can test the live site.
 
 ## Known to-dos
-- None right now.
+Open items for Antonis (he asked to be reminded; tell him at the start of a session and tick them off
+here when done). As of Nov 18, 2026:
+- [ ] Build the iPhone app 1.1.0 (8) on his Mac (adds "Add to calendar" in the app). Steps: openinbox-app
+      `TODO.md` 6e (`git pull && npm install`, `npm run build:ios`, `npm run submit:ios`, install from TestFlight).
+- [ ] Make support@ a shared inbox if he wants the team features there (OpenInbox → Admin → Inboxes →
+      support@ → General → Shared → Save). Safe since openinbox PR #50.
+- [ ] R2 lifecycle rule: delete `backups/` objects in `openinbox-mail` after 90 days (Cloudflare → R2 →
+      openinbox-mail → Settings → Object lifecycle rules). Not confirmed done.
+- [ ] Dependabot PR antwnakys/openinbox#51 (11 minor/patch updates, Nov 16): Claude tests and merges it
+      when he says so.
 
 ## History
 1. Initial portfolio → 2. dark editorial-tech redesign → 3. name "Antonis",
