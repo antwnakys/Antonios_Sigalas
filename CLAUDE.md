@@ -143,6 +143,8 @@ here when done). As of Nov 18, 2026:
       support@ → General → Shared → Save). Safe since openinbox PR #50.
 - [ ] R2 lifecycle rule: delete `backups/` objects in `openinbox-mail` after 90 days (Cloudflare → R2 →
       openinbox-mail → Settings → Object lifecycle rules). Not confirmed done.
+- [ ] Live test of the Nov 18 features with the Claude test account: he first resets its password in
+      OpenInbox → Admin → Users (a new, throwaway one; never a real password, never pasted into memory).
 - [ ] Dependabot PR antwnakys/openinbox#51 (11 minor/patch updates, Nov 16): Claude tests and merges it
       when he says so.
 
@@ -193,4 +195,7 @@ here when done). As of Nov 18, 2026:
    built and submitted from his Mac (Nov 18); OpenInbox gained the rest of his WinguSuite list: reply
    templates, filters with several labels, print + "printed" tracking, who read/replied/forwarded/printed on
    each message, phone "is replying", earlier emails in History, custom folders (public/private), and one
-   row for the same email in several inboxes (Nov 18, 2026).
+   row for the same email in several inboxes (Nov 18, 2026). → 26. OpenInbox batch 8 (PR #55): the Unified inbox count counts
+   an email once, templates fill in names ({first name}, {my name}, {date}…), "waiting too long" Intercom
+   alerts per shared inbox, a weekly report by Intercom on Mondays to admins, and folders inside folders
+   (Nov 18, 2026).
