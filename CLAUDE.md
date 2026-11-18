@@ -107,7 +107,8 @@ store tokens, keys or passwords here (this file is public).
   `openinbox-mail/backups/` (repo secret `CLOUDFLARE_BACKUP_TOKEN`; first run
   succeeded Nov 11, 2026; restore steps in its `BACKUP.md`). The unused push
   code was removed. Its `FORFUTURE/` folder holds a ready plan and setup script
-  for a second, separate OpenInbox on a future domain (start there when he says
+  for a second, separate OpenInbox for his startup (named Nov 18, 2026; the name and domain are only in that private repo, not here;
+  whole team, no iPhone app) (start there when he says
   "read FORFUTURE"; `FORFUTURE/PROMPTS.md` has the exact messages he sends at
   each step). Details: that repo's CLAUDE.md. Pushing to its `main` redeploys
   the Worker. Never click the Deploy to Cloudflare button again (it creates a
@@ -200,4 +201,6 @@ here when done). As of Nov 18, 2026:
    brought up to date: the company copy gets everything above; the copy script now also switches the
    restore-test workflow (it still had his Cloudflare account id); re-tested on a fresh copy, all 134
    tests pass (Nov 18, 2026). → 28. OpenInbox library updates (Dependabot #51) tested and merged on his
-   "merge 51"; live (Nov 18, 2026).
+   "merge 51"; live (Nov 18, 2026). → 29. the startup has a name and domain (kept in the private openinbox repo). FORFUTURE filled in for it
+   (script defaults, prompts, setup steps), app dropped from the plan, and tested steps for bringing his
+   newer features into the company copy later (openinbox PR #58; Nov 18, 2026).
