@@ -137,8 +137,8 @@ store tokens, keys or passwords here (this file is public).
 ## Known to-dos
 Open items for Antonis (he asked to be reminded; tell him at the start of a session and tick them off
 here when done). As of Nov 18, 2026:
-- [ ] Build the iPhone app 1.1.0 (8) on his Mac (adds "Add to calendar" in the app). Steps: openinbox-app
-      `TODO.md` 6e (`git pull && npm install`, `npm run build:ios`, `npm run submit:ios`, install from TestFlight).
+- [ ] Install the iPhone app 1.1.0 (8) from TestFlight (built and submitted Nov 18) and check "Add to calendar"
+      on an invite; then tick openinbox-app `TODO.md` 6e.
 - [ ] Make support@ a shared inbox if he wants the team features there (OpenInbox → Admin → Inboxes →
       support@ → General → Shared → Save). Safe since openinbox PR #50.
 - [ ] R2 lifecycle rule: delete `backups/` objects in `openinbox-mail` after 90 days (Cloudflare → R2 →
@@ -189,4 +189,8 @@ here when done). As of Nov 18, 2026:
    conversation, Admin → Reports; the same email stored once across inboxes (Nov 12, 2026) → 24. OpenInbox: sidebar
    toggle and dates with 12-hour times (computer, then phone), library updates merged, security review of
    the new features (two link privacy leaks fixed), shared inboxes keep read mail read when switched or
-   joined; app build 1.1.0 (8) planned for 3 PM on his Mac (reminder set) (Nov 13, 2026).
+   joined; app build 1.1.0 (8) planned for 3 PM on his Mac (reminder set) (Nov 13, 2026) → 25. App build 1.1.0 (8)
+   built and submitted from his Mac (Nov 18); OpenInbox gained the rest of his WinguSuite list: reply
+   templates, filters with several labels, print + "printed" tracking, who read/replied/forwarded/printed on
+   each message, phone "is replying", earlier emails in History, custom folders (public/private), and one
+   row for the same email in several inboxes (Nov 18, 2026).
