@@ -198,4 +198,7 @@ here when done). As of Nov 18, 2026:
    row for the same email in several inboxes (Nov 18, 2026). → 26. OpenInbox batch 8 (PR #55): the Unified inbox count counts
    an email once, templates fill in names ({first name}, {my name}, {date}…), "waiting too long" Intercom
    alerts per shared inbox, a weekly report by Intercom on Mondays to admins, and folders inside folders
-   (Nov 18, 2026).
+   (Nov 18, 2026). → 27. memory saved in all three repos, and OpenInbox's FORFUTURE plan
+   brought up to date: the company copy gets everything above; the copy script now also switches the
+   restore-test workflow (it still had his Cloudflare account id); re-tested on a fresh copy, all 134
+   tests pass (Nov 18, 2026).
