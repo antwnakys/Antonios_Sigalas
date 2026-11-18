@@ -145,8 +145,6 @@ here when done). As of Nov 18, 2026:
       openinbox-mail → Settings → Object lifecycle rules). Not confirmed done.
 - [ ] Live test of the Nov 18 features with the Claude test account: he first resets its password in
       OpenInbox → Admin → Users (a new, throwaway one; never a real password, never pasted into memory).
-- [ ] Dependabot PR antwnakys/openinbox#51 (11 minor/patch updates, Nov 16): Claude tests and merges it
-      when he says so.
 
 ## History
 1. Initial portfolio → 2. dark editorial-tech redesign → 3. name "Antonis",
@@ -201,4 +199,5 @@ here when done). As of Nov 18, 2026:
    (Nov 18, 2026). → 27. memory saved in all three repos, and OpenInbox's FORFUTURE plan
    brought up to date: the company copy gets everything above; the copy script now also switches the
    restore-test workflow (it still had his Cloudflare account id); re-tested on a fresh copy, all 134
-   tests pass (Nov 18, 2026).
+   tests pass (Nov 18, 2026). → 28. OpenInbox library updates (Dependabot #51) tested and merged on his
+   "merge 51"; live (Nov 18, 2026).
